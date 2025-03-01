@@ -1,0 +1,28 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  color: white;
+  
+
+  @media (min-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
+
+  & .landing-button-container {
+    margin: 0 auto;
+  }
+
+  & .landing-error {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+  }
+}

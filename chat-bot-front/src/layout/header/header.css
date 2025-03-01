@@ -1,0 +1,29 @@
+.header {
+  position: sticky;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  height: 85px;
+  min-width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+
+  & .belt {
+    display: flex;
+    gap: 16px;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: flex-start;
+
+    & .drawer-btn {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
+
+    & h2 {
+      cursor: pointer;
+    }
+  }
+}

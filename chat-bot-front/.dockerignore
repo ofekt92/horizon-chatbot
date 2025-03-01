@@ -1,0 +1,17 @@
+node_modules
+.env
+.env.*
+*.log
+logs
+*.out
+dist
+build
+.DS_Store
+Thumbs.db
+.git
+.gitignore
+docker-compose.yml
+.dockerignore
+.vscode
+.idea
+*.swp

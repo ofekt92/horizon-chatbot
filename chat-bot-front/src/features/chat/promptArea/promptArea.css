@@ -1,0 +1,19 @@
+.chat-prompt-container {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+  & form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid #ccc;
+    background-color: #837ddd;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    border-radius: var(--base-border-radius);
+  }
+}

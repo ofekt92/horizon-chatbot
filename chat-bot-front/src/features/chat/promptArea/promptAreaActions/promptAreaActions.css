@@ -1,0 +1,50 @@
+.chat-prompt-actions-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  & .chat-prompt-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & .chat-prompt-actions-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-start;
+    }
+
+    & button {
+      border-radius: 50%;
+      box-sizing: border-box;
+      padding: 0.3rem 0.5rem;
+      border: none;
+
+      & img {
+        width: 25px;
+        height: 25px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:nth-child(2) div {
+        border: 1px solid black;
+        border-radius: 0;
+        width: 25px;
+        height: 25px;
+        background-color: black;
+      }
+    }
+
+    & .chat-prompt-actions {
+      display: flex;
+      gap: 1rem;
+    }
+
+    & .chat-prompt-send-btn {
+      transform: rotate(180deg);
+    }
+  }
+}

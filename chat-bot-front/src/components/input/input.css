@@ -1,0 +1,61 @@
+:root {
+  --input-focus-outline-color: #038c8e;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 50px;
+
+  & .input-label {
+    position: absolute;
+    left: 30px;
+    top: 25%;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+
+    &.focused {
+      transform: translateY(-150%);
+      color: white;
+      z-index: 100;
+      font-weight: 700;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 101%;
+      height: 1.2rem;
+      z-index: -1;
+      transform: translateY(-50%);
+    }
+  }
+
+  & input {
+    height: 100%;
+    padding: 16px 16px 16px 30px;
+    border: 1px solid #a59e9e;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: inherit;
+
+    &:focus {
+      outline: 1px solid var(--input-focus-outline-color);
+    }
+  }
+
+  & .input-error {
+    position: absolute;
+    bottom: -2.8rem;
+    left: 0;
+    font-size: 1em;
+    color: #ff0000;
+    font-weight: bolder;
+  }
+}

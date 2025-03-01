@@ -1,0 +1,86 @@
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  color: white;
+  background-color: #544ec3;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 10000;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: -6px -1px 8px 0px #afa0a0;
+  border-radius: 4px;
+
+  @media (max-width: 768px) {
+    width: 75%;
+    left: -75%;
+  }
+
+  &.open {
+    transform: translateX(100%);
+  }
+
+  & #drawer__menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+  }
+  & .drawer__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 16px;
+  }
+
+  & .drawer-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem;
+
+    & .drawer-delete-btn {
+      background-color: #ff0000;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #ff3333;
+        opacity: 0.8;
+      }
+
+      &.disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+        opacity: 0.8
+      }
+    }
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  visibility: visible;
+  transition: background 0.3s ease-in-out;
+  z-index: 9999;
+}
