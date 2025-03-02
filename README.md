@@ -51,6 +51,8 @@ chat-bot-backend/models/**MODEL_NAME**
  Sessions should be controlled by the Backend, in Redis or a traditional DB where we could handle multitple sessions for many users.
  Currently, all sessions will be terminated if (when!) the process ends.
  Also, we're currently managing user sessions in-memory with a simple mapped object. I'd move all of that logic to a Redis server so that we could retreive sessions after, for example, a process restart.
+
+ Additionaly, sessions should have a name. switching sessions by ID can be confusing.
  
 
  - Auth
