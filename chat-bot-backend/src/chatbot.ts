@@ -12,8 +12,9 @@ const llama = await getLlama();
 
 console.log(chalk.yellow("Resolving model file..."));
 
+
 const modelPath = await resolveModelFile(
-    "hf:mradermacher/Llama-3.2-3B-Instruct-GGUF:Q8_0",
+    process.env.MODEL ?? "hf:mradermacher/Llama-3.2-3B-Instruct-GGUF:Q8_0",
     modelsDirectory
 );
 

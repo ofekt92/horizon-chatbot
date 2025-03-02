@@ -10,7 +10,7 @@
   padding: 1rem;
   color: white;
 
-  --prompt-color: #df5708;
+  --prompt-color: rgb(148 148 150);
 
   @media (min-width: 768px) {
     max-height: 400px;
@@ -22,7 +22,12 @@
     gap: 1rem;
     & .chat-history-user {
       color: var(--prompt-color);
-      margin-bottom: 10px;
+      /* background-color: white; */
+      width: fit-content;
+      box-sizing: border-box;
+      padding: 0.3rem;
+      border-radius: 8px;
+      margin-block: 10px;
     }
   }
 
@@ -35,7 +40,14 @@
     & .chat-item {
       & .chat-prompt {
         color: var(--prompt-color);
+        /* background-color: white; */
+        width: fit-content;
+        box-sizing: border-box;
+        padding: 0.3rem;
+        border-radius: 8px;
         margin-block: 10px;
+        max-width: 100%;
+        overflow-x: hidden;
       }
     }
 

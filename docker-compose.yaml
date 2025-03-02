@@ -1,0 +1,23 @@
+services:
+  be-service:
+    container_name: "backend-service"
+    build:
+      context: ./chat-bot-backend
+      dockerfile: dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - RATE_LIMIT=1000
+      - PORT=4000
+
+  fe-service:
+    container_name: frontend-service
+    build:
+      context: ./chat-bot-front
+      dockerfile: dockerfile
+    ports:
+      - "5173:3000"
+    environment:
+      - NODE_ENV=development
+      - PORT=5173

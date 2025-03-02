@@ -1,5 +1,6 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Preahvihear", serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -16,7 +17,7 @@
 
   --base-border-radius: 8px;
 
-  --button-hover-background-color: #4f46e5;
+  --button-hover-background-color: #383744
   --button-hover-color: white;
   --button-border-color: black;
   --button-border-radius: 24px;

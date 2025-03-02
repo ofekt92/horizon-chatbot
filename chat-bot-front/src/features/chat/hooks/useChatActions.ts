@@ -5,6 +5,7 @@ import { useParams } from "wouter";
 import { validateChatRequestSchema } from "../validations";
 import { RestartSessionResponse } from "../types/session.types";
 import { ChatRequest } from "../types/chat.types";
+import { promptSchema } from "./types";
 
 
 export type PromptToAnswers = {
@@ -48,6 +49,13 @@ export function useChatActions() {
             throw new Error("Session ID is missing");
         }
 
+        const isValid = await promptSchema.safeParseAsync(prompt);
+        console.log(isValid)
+        if (!isValid.success && isValid.error) {
+            setError("Prompt is invalid. Prompts should be between 1 and 999 characters. Please try again.");
+            return;
+        }
+
         setPrompts(prev => [...prev, prompt]);
 
         try {
@@ -86,7 +94,7 @@ export function useChatActions() {
         })
     }
 
- 
+
 
     return {
         answers,

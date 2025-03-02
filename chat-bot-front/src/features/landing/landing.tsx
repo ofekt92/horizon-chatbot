@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "../../components/button/button";
 import { useSessionsPersistence } from "../../context/sessionsPersistenceContext";
 import { useHttp } from "../../hooks";
+import { SlidingAnimation } from "../../components/slideAnimation/slideAnimation";
 
 export function Landing() {
     const { post } = useHttp();
@@ -38,15 +39,19 @@ export function Landing() {
     return (
         <section className="landing">
             <div>
-                <h1>Welcome To Horizon AI Chatbot</h1>
-                <h2>This is the first AI Chatbot I had the pleasure of developing!</h2>
-                <p>I hope you enjoy your time here</p>
-                {/* <h2></h2> */}
+                <SlidingAnimation delay={150}>
+                    <h1>Welcome To Horizon AI Chatbot</h1>
+                    <h2>This is the first AI Chatbot I had the pleasure of developing!</h2>
+                    <p>I hope you enjoy your time here</p>
+                    {/* <h2></h2> */}
+                </SlidingAnimation>
             </div>
-            <div className="landing-button-container">
-                <Button onClick={startChat}>Start!</Button>
-            </div>
-            {error && <p className="landing-error">{error}</p>}
+            <SlidingAnimation delay={300}>
+                <div className="landing-button-container">
+                    <Button onClick={startChat}>Start!</Button>
+                </div>
+                {error && <p className="landing-error">{error}</p>}
+            </SlidingAnimation>
         </section>
     )
 }

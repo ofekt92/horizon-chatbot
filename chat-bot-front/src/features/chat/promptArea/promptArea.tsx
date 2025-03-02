@@ -41,7 +41,7 @@ export const PromptArea = memo(function PromptArea({ onSubmit, error, onReset }:
                     error={!!error}
                     errorText={error ?? ""}
                 />
-                <PromprtAreaActions loading={loading} onReset={resetHandler} />
+                <PromprtAreaActions disabled={prompt.length === 0} loading={loading} onReset={resetHandler} />
             </form>
         </div>
     );

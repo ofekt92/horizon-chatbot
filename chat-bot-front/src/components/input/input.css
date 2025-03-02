@@ -12,13 +12,13 @@
   & .input-label {
     position: absolute;
     left: 30px;
-    top: 25%;
+    top: 30%;
     font-size: 1rem;
     transition: all 0.2s ease-in-out;
     pointer-events: none;
 
     &.focused {
-      transform: translateY(-150%);
+      transform: translateY(-175%);
       color: white;
       z-index: 100;
       font-weight: 700;

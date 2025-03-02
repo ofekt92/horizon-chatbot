@@ -16,7 +16,7 @@
     font-style: italic;
     font-weight: bold;
     font-size: 24px;
-    color: #b287c2;
+    color: #ecdbb6;
     border-bottom: 3px solid #a59e9e;
   }
 
@@ -39,7 +39,7 @@
         color: red;
       }
       &.active {
-        background-color: #9933be;
+        background-color: #867c89;
       }
 
       & a {
@@ -48,7 +48,7 @@
         font-weight: 500;
 
         &:hover {
-          color: #a47ec2;
+          color: #333135;
         }
       }
     }

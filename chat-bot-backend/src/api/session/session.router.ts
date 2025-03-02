@@ -5,9 +5,13 @@ import { getSessionHistoryRequestSchema } from "./types.js";
 export const sessionRouter = express.Router();
 
 
-sessionRouter.post("/create", async (_req, res) => {
-    const [sessionId] = createSession();
-    res.json({ sessionId });
+sessionRouter.post("/create", async (_req, res, next) => {
+    try {
+        const [sessionId] = createSession();
+        res.json({ sessionId });
+    } catch (error) {
+        next(error);
+    }
 });
 
 sessionRouter.get("/getSessionHistory", validateRequest(getSessionHistoryRequestSchema), async (req, res) => {
@@ -24,14 +28,6 @@ sessionRouter.get("/getSessionHistory", validateRequest(getSessionHistoryRequest
     res.status(200).json({ history });
 });
 
-sessionRouter.post("/restart", (req, res, next) => {
-    try {
-        const [newSessionId] = createSession();
-        res.status(200).json({ sessionId: newSessionId });
-    } catch (error) {
-        next(error);
-    }
-});
 
 sessionRouter.post("/deleteAll", (req, res, next) => {
     try {
