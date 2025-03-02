@@ -27,12 +27,9 @@ export function Landing() {
             addSession(sessionId);
             navigate(`/chat/${sessionId}`);
 
-        } catch (error) {
-            if (error instanceof Error) {
-                setError(error.message);
-            } else {
-                setError("An error occurred");
-            }
+          } catch (error: unknown) {
+            console.error(error)
+            setError("An error occurred. Please try again later.");
         }
     }
 
