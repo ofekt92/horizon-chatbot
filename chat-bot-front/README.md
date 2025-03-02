@@ -26,6 +26,15 @@ Make sure you have the following folder structure to run it:
 
 chat-bot-backend/models/**MODEL_NAME**
 
+# Limitaions
+ There's an obvious limitation where my PC was not powerful enough to run more than 3 sequences, so no more than 3-5 active sessions were permitted.
+ 
+ Session management is lacking (the docs specifically required it to be employed in the client side) and must be fixed for the project to be production-ready.
+ 
+ The session management must be moved to the Backend, where it can be securely managed.
+ 
+ Users should not be able to delete sessions from the client (it was added for persistence)
+
 # Technical Choices
  This project, in its **current** form, is very small. it has two basic pages, a header and a simple drawer. having that in mind,
  I decided to use as few dependencies as possible. Performance was a big deal in this project, and initial loading time is a part of that performance rating.
