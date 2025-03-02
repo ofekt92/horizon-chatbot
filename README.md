@@ -72,3 +72,7 @@ chat-bot-backend/models/**MODEL_NAME**
     More security mechanisms must be employed. preferrably a Firewall, Authentication/Authorization schemes, mechanisms for XSS, Token Forgery, and more should be employed.
   
     HTML Sanitization was added, but it should be improved upon and customized for our needs in production.
+
+- Unit Testing
+- Logging
+  
