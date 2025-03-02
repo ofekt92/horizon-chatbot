@@ -28,13 +28,11 @@ chat-bot-backend/models/**MODEL_NAME**
 
 # Technical Choices
  This project, in its **current** form, is very small. it has two basic pages, a header and a simple drawer. having that in mind,
- I decided to use as few dependencies as possible. Performance was a big deal in this project, and initial loading time is a part of that performance rating.
+ I decided to use **as few dependencies as possible.** Performance was a big deal in this project, and initial loading time is a part of that performance rating.
  
- For the routing, I chose a small routing library called **Wouter**, which resembles the old Reacet Router (before it back a Fullstack Framework).
+ For the routing, I chose a small routing library called **Wouter**, which resembles the old Reacet Router (before it became a Fullstack Framework).
  
- For the form handling, I chose to h
- 
- andle that logic on my own. Loading such a feature-full and large library like React-Hook-Form felt like an overkill for a simple input.
+ For the form handling, I chose to handle that logic on my own. Loading such a feature-full and large library like React-Hook-Form felt like an overkill for a simple input.
  
  I added Zod for input validation, because they're just too good. (plus, it's a very light-weight library).
 
