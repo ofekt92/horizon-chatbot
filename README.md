@@ -78,4 +78,27 @@ chat-bot-backend/models/**MODEL_NAME**
 
 - Unit Testing
 - Logging
-  
+- UI Kit
+
+  Once we scale the application on the frontend, (i.e, develop more pages / features), vanilla css/postcss becomes cumbersome.
+  In its current state, if we had more than 2 developers working on the app, we'd quickly find ourselves duplicating many of the styles and the logic that was already implemented, developed and tested by the developers of MUI/Mantine/Tailwind etc.
+
+
+
+# Performance / Scaling
+The first thing that comes to mind is scaling vertically, and add more processing power to the PC running the LLM (my PC could only work with 3 sequences)
+
+Additionaly, We could try to scale the application horizontally, and create more processses using containers.
+
+Containerization of the back-end will allow us to run more processes, and thus run more sessions/chats simultaneously.
+
+ 
+ 
+ The clientside is already optimized using useCallback and React.memo, but we could utilize more robust caching for the chat history using React-Query or server response caching,
+ so that it wouldn't retreive chata history on every mount. (not on every re-render).
+ 
+ 
+ 
+ 
+ 
+
