@@ -5,6 +5,11 @@ How to Run:
 # Frontend
 
 ```
+git clone
+cd horizon-chatbot
+```
+
+```
 cd chat-bot-front
 npm i
 npm run dev
